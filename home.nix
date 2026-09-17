@@ -40,6 +40,14 @@ in
     };
   };
 
+  programs.git = {
+    enable = true;
+    settings.user = {
+      name = "dkhawk11";
+      email = "130223433+dkhawk11@users.noreply.github.com";
+    };
+  };
+
   programs.starship = {
     enable = true;
     settings = {
