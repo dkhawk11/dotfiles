@@ -12,19 +12,6 @@
     home = "/Users/${user}";
   };
   system.stateVersion = 6;
-  system.defaults = {
-    NSGlobalDomain = {
-      AppleInterfaceStyle = "Dark";
-      KeyRepeat = 2;          # fast key repeat
-      InitialKeyRepeat = 15;  # short delay before repeat
-      _HIHideMenuBar = true;  # auto-hide the menu bar
-      AppleShowAllExtensions = true;
-    };
-    dock.autohide = true;
-    finder.FXPreferredViewStyle = "Nlsv";  # list view by default
-    finder.CreateDesktop = false;          # clean desktop
-    trackpad.Clicking = true;              # tap to click
-  };
   nix-homebrew = {
     enable = true;
     inherit user;
@@ -35,11 +22,20 @@
     onActivation.autoUpdate = true;
     onActivation.extraFlags = [ "--force" ];
     brews = [
+      "abseil"
+      "gh"
+      "go"
       "herdr"
+      "mosh"
+      "moshi-hook"
+      "protobuf"
+      "uv"
     ];
     casks = [
       "wezterm"
       "claude-code"
+      "opensuperwhisper"
+      "pi-gui"
     ];
   };
 }
