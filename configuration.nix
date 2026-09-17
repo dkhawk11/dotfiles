@@ -22,6 +22,10 @@
     onActivation.cleanup = "zap";  # remove anything not listed here
     onActivation.autoUpdate = true;
     onActivation.extraFlags = [ "--force" ];
+    taps = [
+      "minghinmatthewlam/tap"
+      "rjyo/moshi"
+    ];
     brews = [
       "abseil"
       "gh"
