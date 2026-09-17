@@ -14,6 +14,7 @@
   system.stateVersion = 6;
   nix-homebrew = {
     enable = true;
+    autoMigrate = true;
     inherit user;
   };
   homebrew = {
